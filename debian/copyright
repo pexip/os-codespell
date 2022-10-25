@@ -1,0 +1,31 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: codespell
+Source: https://github.com/codespell-project/codespell
+Upstream-Contact: codespell@googlegroups.com
+
+Files: *
+Copyright: 2010-2011 Lucas De Marchi <lucas.de.marchi@gmail.com>,
+ 2011 ProFUSION embedded systems
+License: GPL-2.0
+
+Files: debian/*
+Copyright: 2013 Paul Wise <pabs@debian.org>
+           2015 Peter Spiess-Knafl <dev@spiessknafl.at>
+License: GPL-2.0
+
+License: GPL-2.0
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see
+ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".

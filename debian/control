@@ -1,0 +1,34 @@
+Source: codespell
+Section: devel
+Priority: optional
+Uploaders: Sylvestre Ledru <sylvestre@debian.org>,
+ Peter Spiess-Knafl <dev@spiessknafl.at>,
+ Georg Faerber <georg@riseup.net>
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ python3,
+ python3-chardet,
+ python3-setuptools,
+ python3-pytest,
+ python3-pytest-cov,
+ help2man,
+ virtualenv, python3-virtualenv, python3-distutils
+# to run tests
+Standards-Version: 4.6.0
+Homepage: https://github.com/codespell-project/codespell/
+Vcs-Git: https://salsa.debian.org/python-team/packages/codespell.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/codespell
+
+Package: codespell
+Architecture: all
+Depends:
+ python3,
+ python3-chardet,
+ ${python3:Depends},
+ ${misc:Depends}
+Description: Find and fix common misspellings in text files
+ codespell is designed to find and fix common misspellings in text files.
+ It is designed primarily for checking misspelled words in source code,
+ but it can be used with other files as well.

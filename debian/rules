@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_build:
+	V=`dpkg-parsechangelog -SVersion|cut -d- -f1`; \
+	echo -n "__version__=\"" > codespell_lib/_version.py; \
+	echo -n $$V >> codespell_lib/_version.py; \
+	echo -n "\"" >> codespell_lib/_version.py
+	make codespell.1
+	dh_auto_build
+
+override_dh_auto_test:
+	make check-dictionary
+	virtualenv -p python3 venv
+	( \
+		. venv/bin/activate; \
+		python setup.py install; \
+		pytest-3 codespell_lib; \
+	)
+	rm -rf venv
+
+override_dh_clean:
+	rm -rf codespell.egg-info .cache .coverage dist venv
+	dh_clean

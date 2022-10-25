@@ -1,0 +1,196 @@
+codespell (2.2.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 25 Oct 2022 22:53:41 +0200
+
+codespell (2.2.0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 13.
+    + Drop check for DEB_BUILD_OPTIONS containing "nocheck", since debhelper now
+      does this.
+  * Update standards version to 4.6.0, no changes needed.
+
+  [ Sylvestre Ledru ]
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 17 Aug 2022 23:00:53 +0200
+
+codespell (2.1.0-1) unstable; urgency=medium
+
+  * Upload in unstable
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 21 Aug 2021 20:29:34 +0200
+
+codespell (2.1.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 19 Jun 2021 18:08:13 +0200
+
+codespell (2.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Sylvestre Ledru ]
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Mon, 23 Nov 2020 20:22:39 +0100
+
+codespell (1.17.1-1) unstable; urgency=medium
+
+  * New upstream release
+    the TODO file isn't there anymore
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 24 May 2020 23:53:06 +0200
+
+codespell (1.16.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control: Drop useless build-dependency on python-minimal.
+    This helps to finish the transition of removing python2.
+  * Bump Standards-Version to 4.5.0.
+  * Update URL in debian/upstream/metadata to current project.
+
+  [ Debian Janitor ]
+  * Remove empty debian/patches/series.
+  * Set fields Upstream-Contact in debian/copyright.
+  * Remove obsolete fields Name, Contact from debian/upstream/metadata.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 21 Apr 2020 22:05:34 -0400
+
+codespell (1.16.0-1) unstable; urgency=medium
+
+  [ Sylvestre Ledru ]
+  * New upstream release
+  * Remove the workaround to generate the manpage
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 12 Sep 2019 17:49:53 +0200
+
+codespell (1.15.0-1) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 07 Jul 2019 09:53:02 +0200
+
+codespell (1.15.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 17 May 2019 20:23:02 +0200
+
+codespell (1.14.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version: 4.2.1
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 06 Oct 2018 10:24:12 +0200
+
+codespell (1.13.0-3) unstable; urgency=medium
+
+  * Do not explicitly ship a non existing file (NEWS)
+    (Closes: #903349)
+  * Remove the --parallel useless arg
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 22 Jul 2018 17:30:24 +0200
+
+codespell (1.13.0-2) unstable; urgency=medium
+
+  * Use pytest instead of nose
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 03 Jun 2018 20:29:29 +0200
+
+codespell (1.13.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * The url of project has been changed
+    https://github.com/codespell-project/codespell/
+  * Workaround the testsuite issue
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 17 May 2018 18:05:52 +0200
+
+codespell (1.12.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 09 Mar 2018 18:24:56 +0100
+
+codespell (1.11.0-1) unstable; urgency=medium
+
+  * New upstream release  (Closes: #794322)
+    - Fix the cli arg in the manpage (Closes: #794322)
+    - Consistent formatting in the manpage (Closes: #794321)
+  * d/control: Move to the debian gitlab
+  * d/control: Standards-Version updated to 4.1.3
+  * d/watch: Update the watch file to correctly detect new version
+  * d/control: Add ${python3:Depends} as part of the dep of the package
+    Add python3-setuptools as build dep
+  * d/control: package moved under the python umbrella + add
+    some maintainers
+  * d/p/use-python3.patch removed (merged upstream)
+
+  [ Peter Spiess-Knafl ]
+  * Updated to dh compat 10
+  * Updated build dependencies
+  * Excluded one failing test which is only useable after the package is
+    installed.
+  * Updated d/rules to comply with new upstream release.
+  * Added patch to use python3 in shebang of executable.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 06 Mar 2018 16:25:10 +0100
+
+codespell (1.8-1) unstable; urgency=medium
+
+  * New upstream release: removed upstream applied patches
+  * d/docs: renamed README to README.md
+  * d/copyright: changed maintainer e-mail address
+
+ -- Peter Spiess-Knafl <dev@spiessknafl.at>  Wed, 24 Jun 2015 17:07:13 +0200
+
+codespell (1.7-2) unstable; urgency=medium
+
+  * debian/control: changed maintainer email address.
+  * Upload to unstable.
+
+ -- Peter Spiess-Knafl <dev@spiessknafl.at>  Mon, 27 Apr 2015 00:15:42 +0200
+
+codespell (1.7-1) experimental; urgency=medium
+
+  * New upstream release: removed upstream applied patches
+  * New maintainer: mutually agreed adoption
+  * debian/rules: added upstream changelog
+  * debian/rules: generate manpage with help2man (Closes: #779900)
+  * debian/watch: point to github releases (Closes: #780014)
+  * debian/control: adding Vcs-* fields
+  * debian/control: bumped Standards-Version to 3.9.6, no changes needed.
+  * debian/copyright: Updated Source and Copyright for debian/*
+  * Added patch for "Trying next encoding utf-8" (Closes: #763266)
+
+ -- Peter Spiess-Knafl <psk@autistici.org>  Sun, 08 Mar 2015 23:25:27 +0100
+
+codespell (1.6-2) unstable; urgency=medium
+
+  * Fix the watch file & source URL
+  * Update colour handling (Closes: #742207)
+  * Fix crash on dangling symlinks (Closes: #734419)
+  * Drop warnings about empty files (Closes: #733336)
+  * Make docs assume pkg is installed (Closes: #734412)
+
+ -- Paul Wise <pabs@debian.org>  Thu, 08 May 2014 20:41:12 +0800
+
+codespell (1.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #733131)
+
+ -- Paul Wise <pabs@debian.org>  Thu, 26 Dec 2013 10:01:59 +0800
