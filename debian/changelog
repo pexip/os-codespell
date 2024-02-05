@@ -1,3 +1,10 @@
+codespell (2.2.2-1+pexip24u2) pexip; urgency=medium
+
+  * Add patch to fix config file interpolation.
+    See https://github.com/codespell-project/codespell/pull/2545
+
+ -- Huw Jones <huw@pexip.com>  Mon, 05 Feb 2024 17:04:50 +0000
+
 codespell (2.2.2-1+pexip24u1) pexip; urgency=medium
 
   * Prepare Pexip packaging

@@ -1,0 +1,39 @@
+From 71907e2893ba0b3a3773752e6bd6e987010c51f2 Mon Sep 17 00:00:00 2001
+From: Dimitri Papadopoulos Orfanos
+ <3234522+DimitriPapadopoulos@users.noreply.github.com>
+Date: Mon, 31 Oct 2022 15:37:22 +0100
+Subject: [PATCH] Read config file without interpolation (#2545)
+
+Some config files use interpolation, some do not:
+https://docs.python.org/3/library/configparser.html#interpolation-of-values
+
+Config files might contain occurrences of `%` that should not be
+interpolated. When attempting to interpolate them, `ConfigParser`
+crashes with:
+	ValueError: invalid interpolation syntax
+
+Therefore, we decide to disable interpolation, to avoid crashes.
+We do not expect interpolation in the `[codespell]` section, so
+it is not a problem in practice.
+
+Alternatively, we could read with interpolation, and in the case of
+a ValueError exception, retry without interpolation. However, since
+we do not expect interpolation in the `[codespell]` section, I believe
+the current solution is simpler, faster, to the point.
+---
+ codespell_lib/_codespell.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/codespell_lib/_codespell.py b/codespell_lib/_codespell.py
+index ac28f37240..0e13f15571 100644
+--- a/codespell_lib/_codespell.py
++++ b/codespell_lib/_codespell.py
+@@ -403,7 +403,7 @@ def parse_options(args):
+     cfg_files = ['setup.cfg', '.codespellrc']
+     if options.config:
+         cfg_files.append(options.config)
+-    config = configparser.ConfigParser()
++    config = configparser.ConfigParser(interpolation=None)
+ 
+     # Read toml before other config files.
+     toml_files_errors = list()
