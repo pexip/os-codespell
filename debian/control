@@ -1,10 +1,11 @@
 Source: codespell
 Section: devel
 Priority: optional
-Uploaders: Sylvestre Ledru <sylvestre@debian.org>,
+XSBC-Pexip-Original-Uploaders: Sylvestre Ledru <sylvestre@debian.org>,
  Peter Spiess-Knafl <dev@spiessknafl.at>,
  Georg Faerber <georg@riseup.net>
-Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Build-Depends:
  debhelper-compat (= 13),
  dh-python,
@@ -20,6 +21,7 @@ Standards-Version: 4.6.0
 Homepage: https://github.com/codespell-project/codespell/
 Vcs-Git: https://salsa.debian.org/python-team/packages/codespell.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/codespell
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: codespell
 Architecture: all

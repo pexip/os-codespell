@@ -1,3 +1,9 @@
+codespell (2.2.2-1+pexip24u1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Huw Jones <huw@pexip.com>  Mon, 05 Feb 2024 16:05:11 +0000
+
 codespell (2.2.2-1) unstable; urgency=medium
 
   * New upstream release
